@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkModeManishVersio`n</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Toggle Dark Mode</p>
+            <label class="switch">
+                <input type="checkbox" id="darkModeCheckbox" onclick="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+            <div class="img">
+                <img src="Sample.png" alt="Sample Image">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let toggleDarkMode = () => {
+        var container = document.querySelector(".container");
+        var image = document.querySelector(".img");
+        var checkbox = document.getElementById("darkModeCheckbox");
+        if (checkbox.checked) {
+            container.classList.add("dark");
+            image.classList.add("visibility");
+            document.querySelector("p").classList.add("text-white");
+        } else {
+            container.classList.remove("dark");
+            image.classList.remove("visibility");
+            document.querySelector("p").classList.remove("text-white");
+        }
+    }
+</script>
+
+</html>

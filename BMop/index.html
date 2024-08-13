@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="slider">
+                <input type="range" min="0" max="100" value="0">
+                <p>Gorapan : <span class="value">0</span></p>
+            </div>
+            <div class="image">
+                <img src="Sample - Copy.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    let input = document.querySelector("input");
+    let value = document.querySelector(".value");
+    let image = document.querySelector("img");
+    input.addEventListener("input", (e) => {
+        value.textContent = `${e.target.value}%`;
+        image.style.filter = `brightness(${100 + Number(e.target.value)}%)`;
+    })
+
+</script>
+
+</html>
